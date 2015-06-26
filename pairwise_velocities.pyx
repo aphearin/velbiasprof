@@ -53,10 +53,24 @@ cdef inline double radial_velocity_no_pbc(np.float64_t x1, np.float64_t y1, np.f
 
     return ( dvx*dx + dvy*dy + dvz*dz ) / sqrt( dx*dx + dy*dy + dz*dz )
 
+cdef inline double signed_periodic_square_distance_1d(np.float64_t x1,\
+                                            np.float64_t x2,\
+                                            np.float64_t Lbox):
+    """
+    Calculate the 3D square cartesian distance between two sets of points with periodic
+    boundary conditions.
+    """
+    
+    cdef double dx, dy, dz
+    
+    dx = x2-x1
+    dx = fmin(dx, period[0] - dx)
+
+    return 
 
 
-
-
+def sgn(x, y):
+    return (x < y) - (y < x)
 
 
 

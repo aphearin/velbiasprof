@@ -2,3 +2,5 @@
 *ipynb_checkpoints*
 DATA/*
 build/*
+*.so
+pairwise_velocities.c
