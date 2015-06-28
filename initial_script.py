@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-Initial script used to turn queried halos and a single sub-volume of particles
-into hdf5 files.  
+Initial script used to turn csv data of 
+queried halos and particles into hdf5 files.  
 """
 
 from astropy.io.ascii import read
