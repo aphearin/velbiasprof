@@ -4,3 +4,4 @@ DATA/*
 build/*
 *.so
 pairwise_velocities.c
+FIGS/*.pdf
