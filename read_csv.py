@@ -32,7 +32,7 @@ def main(fname):
     data = read_csv(fname, dt)
     end = time()
     runtime = end-start
-    print("Total time to read csv = %.1f seconds" % runtime)
+    print("Total time to read csv = %.1f seconds\n" % runtime)
 
     with h5py.File(output_fname,'w') as f:
         f['data'] = data
